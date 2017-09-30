@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_lin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <CheckedTextView
+            android:id="@+id/item_name_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:src="@mipmap/ic_launcher" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-6dp">
+
+            <TextView
+                android:id="@+id/item_indicate"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/main_reddot_shape"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="33"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="个人中心" />
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--状态栏-->
+    <color name="statusbar_color">#282828</color>
+    <!--tab颜色-->
+    <color name="tab_checked_color">#ff552e</color>
+    <color name="tab_no_checked_color">#333333</color>
+
+    <color name="colorwhite">#FFFFFF</color>
+    <color name="colorred">#ff552e</color>
+
+
+</resources>

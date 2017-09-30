@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'//用于扩展绑定关系
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "com.zhangrong.xxappdv"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //约束布局
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    //约束布局动画
+    compile 'com.android.support:transition:25.1.0'
+    //6.0权限
+    compile 'com.yanzhenjie:permission:1.0.3'
+    //EventBus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:support-v4:24.2.1'
+    //okhttp
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    //Retrofit
+    compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+    compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+    //RxJava
+    compile "io.reactivex:rxkotlin:$rxkotlin_version"
+    compile "io.reactivex:rxandroid:$rxandroid_version"
+    compile 'com.google.code.gson:gson:2.6.2'
+    //recyclerview
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    //万能adapter
+    compile 'com.zhy:base-rvadapter:3.0.2'
+    //BaseRecyclerViewAdapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7'
+    compile 'com.zhy:base-adapter:3.0.2'
+    //banner图
+    compile 'cn.lightsky.infiniteindicator:library:1.1.0'
+    //图片加载
+    compile 'com.facebook.fresco:fresco:1.3.0'
+    //日志记录
+    compile 'com.apkfuns.logutils:library:1.5.1.1'   //logger的扩展 支持直接打印数据集合
+    compile 'com.jakewharton.timber:timber:4.5.1'   //打印日志到文件主要记录日志
+    compile 'com.github.tianzhijiexian:logger:1.2.1'   //支持xml和json ，不支持数组和常见的集合类
+
+}
